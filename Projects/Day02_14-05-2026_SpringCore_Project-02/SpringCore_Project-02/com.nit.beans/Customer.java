@@ -1,4 +1,4 @@
-com.nit.beanspackage com.nit.beans;
+package com.nit.beans;
 
 public class Customer {
 	private int id;
