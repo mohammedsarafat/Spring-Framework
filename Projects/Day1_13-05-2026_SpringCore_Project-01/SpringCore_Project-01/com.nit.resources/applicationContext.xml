@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <!--beans definition here-->
+       <bean class="com.nit.beans.Employee" id="empId">
+       <property name="id" value="101"></property>
+       <property name="name" value="Subham"></property>
+       <property name="salary" value="50000"></property>
+       <property name="Dept" value="Devloper"></property>
+       
+       </bean>
+</beans>
