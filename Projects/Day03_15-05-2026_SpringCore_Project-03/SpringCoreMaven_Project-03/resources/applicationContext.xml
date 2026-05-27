@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="com.nit.beans.User" id="u_Id">
+		<property name="id" value="8998"></property>
+		<property name="u_name" value="Hari"></property>
+		<property name="u_emil" value="har123@gmail.com"></property>
+		<property name="u_mob_num" value="9887676553"></property>
+	</bean>
+</beans>
