@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="com.nit.beans.Course" id="cId">
+		<property name="c_id" value="8998"></property>
+		<property name="c_name" value="JFS"></property>
+		<property name="c_fee" value="30000"></property>
+	</bean>
+
+	<bean class="com.nit.beans.Student" id="sId">
+		<property name="s_id" value="08"></property>
+		<property name="s_name" value="Sarafat"></property>
+		<property name="s_age" value="23"></property>
+		<property name="s_branch" value="CSE"></property>
+		<property name="c" ref="cId"></property>
+	</bean>
+</beans>
