@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Student 1 -->
+
+	<bean id="student1" class="com.nit.beans.Student">
+
+		<property name="studentId" value="101" />
+
+		<property name="studentName" value="Subham" />
+
+		<property name="studentCourse" value="Java Full Stack" />
+
+		<property name="studentFees" value="50000" />
+
+	</bean>
+
+	<!-- Student 2 -->
+
+	<bean id="student2" class="com.nit.beans.Student">
+
+		<property name="studentId" value="102" />
+
+		<property name="studentName" value="Rahul" />
+
+		<property name="studentCourse" value="Python Full Stack" />
+
+		<property name="studentFees" value="45000" />
+
+	</bean>
+
+	<!-- Student 3 -->
+
+	<bean id="student3" class="com.nit.beans.Student">
+
+		<property name="studentId" value="103" />
+
+		<property name="studentName" value="Priya" />
+
+		<property name="studentCourse" value="Data Science" />
+
+		<property name="studentFees" value="60000" />
+
+	</bean>
+
+	<!-- Institute -->
+
+	<bean id="institute" class="com.nit.beans.Institute">
+
+		<property name="instituteId" value="1" />
+
+		<property name="instituteName" value="Naresh IT" />
+
+		<property name="students">
+
+			<list>
+
+				<ref bean="student1" />
+
+				<ref bean="student2" />
+
+				<ref bean="student3" />
+
+			</list>
+
+		</property>
+
+	</bean>
+
+</beans>
