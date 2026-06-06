@@ -20,8 +20,8 @@ public class AppConfig {
 
 		Passport p = new Passport();
 
-		p.setName("Subham");
-		p.setNumber("IND768235");
+		p.setName("Sarafat");
+		p.setNumber("IND784598");
 		p.setCountry("India");
 
 		return p;
@@ -32,10 +32,10 @@ public class AppConfig {
 
 		Person p = new Person();
 
-		p.setP_name("Subham Behera");
+		p.setP_name("Mohammed Sarafat");
 		p.setP_age(21);
 		p.setAdress("Odisha");
-		p.setMob_num(7896532468L);
+		p.setMob_num(7326962693L);
 
 		// Inject Passport Object
 		p.setP(getPassport());
