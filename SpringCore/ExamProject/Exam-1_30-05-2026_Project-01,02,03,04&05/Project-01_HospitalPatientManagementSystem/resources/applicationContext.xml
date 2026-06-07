@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean class="com.nit.beans.Doctor" id="docId">
+		<property name="dId" value="2422"></property>
+		<property name="dName" value="Ramesh"></property>
+		<property name="dSpecial" value="Kidnee Failure"></property>
+
+	</bean>
+
+	<bean class="com.nit.beans.Patient" id="patId">
+		<property name="pId" value="2452"></property>
+		<property name="pName" value="Raja"></property>
+		<property name="pDisease" value="Kidnee"></property>
+		<property name="d" ref="docId"></property>
+
+	</bean>
+</beans>
