@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="com.nit.beans.Insurance" id="iId">
+		<constructor-arg value="555"></constructor-arg>
+		<constructor-arg value="ABC"></constructor-arg>
+		<constructor-arg value="35000"></constructor-arg>
+
+	</bean>
+
+	<bean class="com.nit.beans.Vehicle" id="vId">
+		<constructor-arg value="7878"></constructor-arg>
+		<constructor-arg value="Truck"></constructor-arg>
+		<constructor-arg value="Volvo"></constructor-arg>
+		<constructor-arg ref="iId"></constructor-arg>
+
+	</bean>
+
+</beans>
