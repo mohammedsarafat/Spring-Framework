@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean class="com.nit.beans.DeliveryPartner" id="dId">
+		<constructor-arg value="555"></constructor-arg>
+		<constructor-arg value="Rajesh"></constructor-arg>
+		<constructor-arg value="98745218"></constructor-arg>
+
+	</bean>
+	
+	<bean class="com.nit.beans.Order" id="oId">
+		<property name="oId" value="7878"></property>
+		<property name="pName" value="Hari"></property>
+		<property name="oAmt" value="1200"></property>
+		<property name="d" ref="dId"></property>
+
+	</bean>
+	
+</beans>
