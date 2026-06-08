@@ -1,0 +1,75 @@
+Question01: Hospital Patient Management System(XML Based)
+-----------------------------------------------------------
+
+Objective:
+----------
+Develop a Hospital Patient Management System using Spring Core. In this project, a patient visits a hospital for treatment and is assigned a doctor. 
+
+1.Create a Patient class containing patient details such as patient ID, patient name, and disease. 
+
+2.Create a Doctor class containing doctor ID, doctor name, and specialization. Inject the Doctor object into the Patient object using Setter Injection 
+and display complete patient and doctor information. 
+
+This project demonstrates how one bean depends on another bean and how Spring manages object 
+dependencies using setter methods.
+
+
+Question02:Vehicle Insurance Management System (XML Based)
+-----------------------------------------------------------
+
+Objective:
+----------
+Develop a Vehicle Insurance Management System using Spring Core. In this project, every vehicle owner purchases an insurance policy for their vehicle. 
+
+1.Create a Vehicle class containing vehicle number, vehicle name, and owner name. Create an Insurance class containing policy ID, company name, 
+and premium amount. 
+
+2.Inject the Insurance object into the Vehicle object using Constructor Injection and display complete vehicle and insurance details. 
+This project illustrates how Spring Core can manage object relationships using constructor injection and promotes loose coupling between classes.
+
+Question03: E-Commerce Product Delivery System (XML Based)
+------------------------------------------------------------
+Objective:
+----------
+Develop an E-Commerce Product Delivery System using Spring Core. In this application, a customer places an order and a delivery partner is assigned 
+for shipment. 
+
+1.Create an Order class containing order ID, product name, and order amount. 
+2.Create a DeliveryPartner class containing partner ID, partner name, and contact number. Inject the DeliveryPartner object into the Order class using 
+Constructor Injection and inject the order details using Setter Injection. 
+
+3.Display complete order and delivery partner details. This project demonstrates dependency management in an online shopping environment.
+
+Question04:Employee Project Allocation System
+---------------------------------------------
+
+Objective:
+----------
+Develop an Employee Project Allocation System using Spring Core. 
+Create an Employee class containing employee ID, employee name, and designation. 
+An employee may be assigned to multiple projects during a year. 
+Use a Set<String> to store project names and inject the collection using Spring Collection Injection.
+Display employee details along with the assigned projects. Since the same project should not be assigned more than once, 
+a Set is used. This project demonstrates Set Injection in a corporate project management environment.
+
+Question05: Library Management System.
+--------------------------------------
+Objective:
+-----------
+Develop a Library Management System using Spring Core. 
+Create a Library class containing library ID, library name, and address. 
+Create a Librarian class containing librarian ID, librarian name, and experience. 
+Inject the Librarian object into the Library class using Object Type Injection. 
+Use a List<String> to store book titles, a Set<String> to store book categories, and a Map<String, Integer> to store category names 
+and the number of books available in each category. 
+Display complete library information along with librarian details, books, categories, and category-wise book counts.
+
+Properties:
+------------
+libraryId
+libraryName
+address
+Librarian librarian
+List<String> books
+Set<String> categories
+Map<String, Integer> categoryCount
