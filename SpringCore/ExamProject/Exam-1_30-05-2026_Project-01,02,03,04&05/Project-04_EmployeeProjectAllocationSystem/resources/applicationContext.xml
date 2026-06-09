@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.nit.beans.Employee">
+
+		<property name="empId" value="101" />
+
+		<property name="empName" value="Sahid Khan" />
+
+		<property name="designation" value="Java Developer" />
+
+		<property name="projects">
+
+			<set>
+
+				<value>Banking Management System</value>
+
+				<value>Employee Management System</value>
+
+				<value>Online Food Delivery System</value>
+
+				<value>Employee Management System</value>
+
+			</set>
+
+		</property>
+
+	</bean>
+
+</beans>
