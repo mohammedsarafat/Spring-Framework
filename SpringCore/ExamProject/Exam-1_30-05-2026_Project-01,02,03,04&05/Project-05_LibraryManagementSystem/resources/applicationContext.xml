@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Librarian Bean -->
+
+    <bean id="librarian"
+          class="com.nit.beans.Librarian">
+
+        <property name="librarianId" value="501"/>
+        <property name="librarianName" value="Ramesh"/>
+        <property name="experience" value="12"/>
+
+    </bean>
+
+    <!-- Library Bean -->
+
+    <bean id="library"
+          class="com.nit.beans.Library">
+
+        <property name="libraryId" value="101"/>
+        <property name="libraryName"
+                  value="National Digital Library"/>
+        <property name="address"
+                  value="Hyderabad"/>
+
+        <!-- Object Type Injection -->
+
+        <property name="librarian"
+                  ref="librarian"/>
+
+        <!-- List Injection -->
+
+        <property name="books">
+            <list>
+                <value>Core Java</value>
+                <value>Spring Framework</value>
+                <value>Hibernate</value>
+                <value>Microservices</value>
+            </list>
+        </property>
+
+        <!-- Set Injection -->
+
+        <property name="categories">
+            <set>
+                <value>Programming</value>
+                <value>Database</value>
+                <value>Web Development</value>
+                <value>Programming</value>
+            </set>
+        </property>
+
+        <!-- Map Injection -->
+
+        <property name="categoryCount">
+            <map>
+                <entry key="Programming" value="120"/>
+                <entry key="Database" value="80"/>
+                <entry key="Web Development" value="60"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>
