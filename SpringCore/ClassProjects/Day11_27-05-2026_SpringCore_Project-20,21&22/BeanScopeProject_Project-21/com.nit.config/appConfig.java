@@ -5,6 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "com.nit.beans")
-public class AppConfig {
+public class appConfig {
 
 }
