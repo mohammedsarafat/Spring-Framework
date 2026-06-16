@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FirstController {
 	@RequestMapping("/Hello")
 	public String getHelloPage() {
-		return "helloPage ";
+		return "helloPage";
 	}
 }
  
