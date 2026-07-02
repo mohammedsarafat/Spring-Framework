@@ -1,8 +1,9 @@
 package com.nit.backend;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.nit.model.Student;
@@ -10,42 +11,36 @@ import com.nit.model.Student;
 @Controller
 public class FormController {
 
-	@RequestMapping("/home")
-	public String getHomePage() {
-		return "homePage";
-	}
+    @GetMapping("/home")
+    public String home() {
+        return "homePage";
+    }
 
-	@RequestMapping("/about")
-	public String getAboutUs() {
-		return "aboutUs";
-	}
+    @GetMapping("/about")
+    public String about() {
+        return "aboutUs";
+    }
 
-	@RequestMapping("/profile")
-	public ModelAndView getProfilePage() {
+    @GetMapping("/registration")
+    public String registration() {
+        return "registration";
+    }
 
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("profilePage");
-		mav.addObject("Msg", "Profile page is very important.");
-		return mav;
-	}
+    @PostMapping("/submit")
+    public ModelAndView submit(@ModelAttribute Student student) {
 
-	@RequestMapping("/registration")
-	public ModelAndView getForm() {
+        ModelAndView mav = new ModelAndView();
 
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("form");
-		return mav;
-	}
+        mav.setViewName("studentProfilePage");
 
-	@PostMapping("/submit")
-	public ModelAndView submit(Student student) {
+        mav.addObject("student", student);
 
-		ModelAndView mav = new ModelAndView();
+        return mav;
+    }
+    
+    @GetMapping("/profile")
+    public String profilePage() {
+        return "profilePage";
+    }
 
-		mav.setViewName("profilePage2");
-
-		mav.addObject("student", student);
-
-		return mav;
-	}
 }
