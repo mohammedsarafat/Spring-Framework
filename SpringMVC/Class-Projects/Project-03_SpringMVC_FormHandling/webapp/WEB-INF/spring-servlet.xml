@@ -14,9 +14,13 @@
           http://www.springframework.org/schema/mvc
           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    <!-- Enable component scanning -->
-   <context:component-scan base-package="com.nit" />
+   <context:component-scan base-package="com.nit.backend" />
    <!-- Enable Spring MVC annotations like @Controller -->
    <mvc:annotation-driven/>
+   
+   <!-- For Static Resources -->
+   <mvc:resources mapping="/resources/**" location="/resources/" />
+    
    <!-- View Resolver -->
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
        <property name="prefix" value="/WEB-INF/views/" />
