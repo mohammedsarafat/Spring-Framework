@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Resume Bean -->
+
+    <bean id="studentResume" class="com.mds.day09.Resume">
+
+        <!-- Setter Injection -->
+        <!--
+        <property name="degree" value="B.Tech"/>
+        <property name="experience" value="1"/>
+        -->
+
+        <!-- Constructor Injection -->
+        <constructor-arg value="B.Tech"/>
+        <constructor-arg value="1"/>
+
+    </bean>
+
+
+    <!-- Student Bean -->
+
+    <bean id="studentData" class="com.mds.day09.Student">
+
+        <!-- Setter Injection -->
+        <!--
+        <property name="name" value="Prashant"/>
+        <property name="id" value="101"/>
+        <property name="address" value="Hyd"/>
+        <property name="resume" ref="studentResume"/>
+        -->
+
+        <!-- Constructor Injection -->
+        <constructor-arg value="Prashant"/>
+        <constructor-arg value="101"/>
+        <constructor-arg value="Hyd"/>
+        <constructor-arg ref="studentResume"/>
+
+    </bean>
+
+</beans>
