@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Manager Bean -->
+
+    <bean id="manager" class="com.nit.project05.Manager">
+
+        <constructor-arg value="Rahul Sharma"/>
+        <constructor-arg value="Software Development"/>
+
+    </bean>
+
+    <!-- Project Bean -->
+
+    <bean id="project" class="com.nit.project05.Project">
+
+        <!-- Constructor Injection -->
+        <constructor-arg ref="manager"/>
+
+        <!-- Setter Injection -->
+        <property name="projectName" value="Hospital Management System"/>
+        <property name="duration" value="12"/>
+
+    </bean>
+
+</beans>
