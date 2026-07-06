@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Doctor Bean -->
+    <bean id="doctor" class="com.nit.project04.Doctor">
+
+        <constructor-arg value="Dr. Rajesh"/>
+        <constructor-arg value="Cardiologist"/>
+
+    </bean>
+
+    <!-- Patient Bean -->
+
+    <bean id="patient" class="com.nit.project04.Patient">
+
+        <constructor-arg value="Mohammed Sarafat"/>
+        <constructor-arg value="24"/>
+        <constructor-arg ref="doctor"/>
+
+    </bean>
+
+</beans>	

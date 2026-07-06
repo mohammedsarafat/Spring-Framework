@@ -1,4 +1,4 @@
-package com.mds;
+package com.nit.project02;
 
 public class Employee
 {

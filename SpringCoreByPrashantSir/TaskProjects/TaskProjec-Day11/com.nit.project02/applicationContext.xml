@@ -8,7 +8,7 @@
 
     <!-- Address Bean -->
 
-    <bean id="address" class="com.mds.Address">
+    <bean id="address" class="com.nit.project02.Address">
 
         <property name="city" value="Hyderabad"/>
         <property name="pincode" value="500001"/>
@@ -17,7 +17,7 @@
 
     <!-- Employee Bean -->
 
-    <bean id="employee" class="com.mds.Employee">
+    <bean id="employee" class="com.nit.project02.Employee">
 
         <property name="name" value="Mohammed Sarafat"/>
         <property name="id" value="101"/>

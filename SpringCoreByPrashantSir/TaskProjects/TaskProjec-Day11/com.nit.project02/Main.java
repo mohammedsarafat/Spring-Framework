@@ -1,14 +1,14 @@
-package com.mds;
+package com.nit.project02;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test
+public class Main
 {
     public static void main(String[] args)
     {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("com/nit/project02/applicationContext.xml");
 
         Employee employee = context.getBean("employee", Employee.class);
 
