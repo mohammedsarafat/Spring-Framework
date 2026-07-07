@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="library" class="com.nit.Library">
+
+        <!-- List : Duplicates Allowed -->
+        <property name="issuedBooks">
+            <list>
+                <value>Java Programming</value>
+                <value>Spring Framework</value>
+                <value>Java Programming</value>
+                <value>Data Structures</value>
+            </list>
+        </property>
+
+        <!-- Set : Unique Values Only -->
+        <property name="memberEmails">
+            <set>
+                <value>rahul@gmail.com</value>
+                <value>priya@gmail.com</value>
+                <value>rahul@gmail.com</value>
+                <value>amit@gmail.com</value>
+            </set>
+        </property>
+
+        <!-- Map : Key-Value Pair -->
+        <property name="bookCopies">
+            <map>
+                <entry key="ISBN101" value="12"/>
+                <entry key="ISBN102" value="8"/>
+                <entry key="ISBN103" value="15"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>

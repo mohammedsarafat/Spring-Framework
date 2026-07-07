@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="rechargePlan"
+          class="com.nit.project03.RechargePlan">
+
+        <property name="plans">
+            <map>
+                <entry key="P199" value="199"/>
+                <entry key="P299" value="299"/>
+                <entry key="P399" value="399"/>
+                <entry key="P499" value="499"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>

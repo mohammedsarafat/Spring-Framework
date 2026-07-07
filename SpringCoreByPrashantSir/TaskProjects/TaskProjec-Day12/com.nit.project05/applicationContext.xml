@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emailConfig" class="com.nit.project05.EmailConfig">
+
+        <property name="config">
+            <props>
+                <prop key="host">smtp.gmail.com</prop>
+                <prop key="port">587</prop>
+                <prop key="username">admin@gmail.com</prop>
+                <prop key="encryptionType">TLS</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>
