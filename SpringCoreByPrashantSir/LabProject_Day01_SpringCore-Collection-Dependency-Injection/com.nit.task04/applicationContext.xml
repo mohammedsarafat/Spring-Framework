@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="department" class="com.nit.task04.DepartmentAllocation">
+
+        <constructor-arg value="DRIEMS University"></constructor-arg>
+        <constructor-arg>
+        		<map>
+        			<entry key="Computer Science" value="Block A-101"></entry>
+        			<entry key="Mechanical" value="Block C-110"></entry>
+        			<entry key="Civil" value="Block D-301"></entry>
+        			<entry key="Electrinics" value="Block E-102"></entry>
+        		</map>
+        </constructor-arg>
+      
+    </bean>
+
+</beans>
