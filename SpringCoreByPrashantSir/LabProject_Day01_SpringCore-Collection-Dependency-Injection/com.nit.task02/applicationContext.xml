@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="medicine" class="com.nit.task02.TrainingInstitute">
+
+        <property name="instituteName" value="Software Training Institute"></property>
+        <property name="technologies">
+        		<set>
+        			<value>JAVA</value>
+        			<value>Spring Boot</value>
+        			<value>React</value>
+        			<value>Docker</value>
+        			<value>Kubernate</value>
+        		</set>
+        </property>
+      
+    </bean>
+
+</beans>
