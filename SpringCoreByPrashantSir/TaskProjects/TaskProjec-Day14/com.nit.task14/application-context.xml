@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="library1"
+          class="com.nit.task14.Library"
+          init-method="initialize"
+          destroy-method="destroy">
+
+        <property name="libraryName"
+                  value="Central Library"/>
+
+        <property name="inChargePerson"
+                  value="Amit Kumar"/>
+
+        <property name="contactNumber"
+                  value="9876543210"/>
+
+        <property name="genres">
+
+            <list>
+
+                <value>Programming</value>
+
+                <value>Technology</value>
+
+            </list>
+
+        </property>
+
+    </bean>
+
+    <bean id="library2"
+          class="com.nit.task14.Library"
+          init-method="initialize"
+          destroy-method="destroy"
+          autowire-candidate="false">
+
+        <property name="libraryName"
+                  value="City Library"/>
+
+        <property name="inChargePerson"
+                  value="Rahul Sharma"/>
+
+        <property name="contactNumber"
+                  value="9123456789"/>
+
+        <property name="genres">
+
+            <list>
+
+                <value>History</value>
+
+                <value>Science</value>
+
+            </list>
+
+        </property>
+
+    </bean>
+
+  
+    <bean id="library3"
+          class="com.nit.task14.Library"
+          init-method="initialize"
+          destroy-method="destroy"
+          autowire-candidate="false">
+
+        <property name="libraryName"
+                  value="Digital Library"/>
+
+        <property name="inChargePerson"
+                  value="Priya Singh"/>
+
+        <property name="contactNumber"
+                  value="9988776655"/>
+
+        <property name="genres">
+
+            <list>
+
+                <value>AI</value>
+
+                <value>Machine Learning</value>
+
+            </list>
+
+        </property>
+
+    </bean>
+
+    <bean id="libraryService"
+          class="com.nit.task14.LibraryService"
+          autowire="byType"/>
+
+</beans>
