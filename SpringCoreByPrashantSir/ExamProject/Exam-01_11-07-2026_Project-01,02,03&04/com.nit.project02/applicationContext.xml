@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Bean -->
+    <bean id="address" class="com.nit.project02.Address">
+
+        <property name="houseNo" value="12-45"/>
+        <property name="city" value="Hyderabad"/>
+        <property name="state" value="Telangana"/>
+        <property name="pincode" value="500001"/>
+
+    </bean>
+
+    <!-- Customer Bean -->
+    <bean id="customer" class="com.nit.project02.Customer">
+
+        <property name="customerId" value="101"/>
+        <property name="customerName" value="Mohammed Sarafat"/>
+        <property name="address" ref="address"/>
+
+        <property name="contactNumbers">
+            <list>
+                <value>9873443210</value>
+                <value>9123457569</value>
+            </list>
+        </property>
+
+    </bean>
+
+</beans>
