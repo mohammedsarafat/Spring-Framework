@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Vice Chancellor Bean -->
+
+    <bean id="vc" class="com.nit.project01.ViceChancellor">
+
+        <property name="name" value="Dr. A.P.J. Abdul Kalam"/>
+
+        <property name="qualification" value="Ph.D"/>
+
+        <property name="experience" value="30"/>
+
+    </bean>
+
+
+    <!-- University Bean -->
+
+    <bean id="university" class="com.nit.project01.University">
+
+        <property name="universityId" value="101"/>
+
+        <property name="universityName" value="National Institute of Technology"/>
+
+        <property name="viceChancellor" ref="vc"/>
+
+        <property name="departments">
+
+            <list>
+                <value>Computer Science</value>
+                <value>Mechanical Engineering</value>
+                <value>Electrical Engineering</value>
+                <value>Civil Engineering</value>
+            </list>
+
+        </property>
+
+        <property name="campusFacilities">
+
+            <set>
+                <value>Library</value>
+                <value>Hostel</value>
+                <value>Sports Complex</value>
+                <value>Medical Center</value>
+            </set>
+
+        </property>
+
+        <property name="academicPrograms">
+
+            <map>
+
+                <entry key="B.Tech" value="4"/>
+
+                <entry key="MBA" value="2"/>
+
+                <entry key="M.Tech" value="2"/>
+
+                <entry key="Ph.D" value="5"/>
+
+            </map>
+
+        </property>
+
+    </bean>
+
+</beans>
