@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Manufacturer Bean -->
+    <bean id="manufacturer" class="com.nit.project03.Manufacturer">
+
+        <constructor-arg value="201"/>
+        <constructor-arg value="Tata Motors"/>
+        <constructor-arg value="India"/>
+
+    </bean>
+
+    <!-- Vehicle Bean -->
+    <bean id="vehicle" class="com.nit.project03.Vehicle">
+
+        <constructor-arg value="101"/>
+        <constructor-arg value="Tata Nexon"/>
+        <constructor-arg ref="manufacturer"/>
+
+        <constructor-arg>
+            <list>
+                <value>ABS</value>
+                <value>Airbags</value>
+                <value>Sunroof</value>
+                <value>Touch Screen</value>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg>
+            <set>
+                <value>Petrol</value>
+                <value>Diesel</value>
+                <value>Electric</value>
+            </set>
+        </constructor-arg>
+
+        <constructor-arg>
+            <map>
+                <entry key="First Service" value="5000 KM"/>
+                <entry key="Second Service" value="10000 KM"/>
+                <entry key="Third Service" value="20000 KM"/>
+            </map>
+        </constructor-arg>
+
+    </bean>
+
+</beans>
