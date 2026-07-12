@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Owner Bean -->
+
+    <bean id="owner" class="com.nit.project04.Owner">
+
+        <constructor-arg value="501"/>
+        <constructor-arg value="Raja"/>
+        <constructor-arg value="9876543210"/>
+
+    </bean>
+
+    <!-- Mall Bean -->
+
+    <bean id="mall" class="com.nit.project04.Mall">
+
+        <constructor-arg value="101"/>
+        <constructor-arg value="City Center Mall"/>
+        <constructor-arg ref="owner"/>
+
+        <constructor-arg>
+            <map>
+                <entry key="Two Wheeler" value="20.0"/>
+                <entry key="Car" value="50.0"/>
+                <entry key="SUV" value="80.0"/>
+            </map>
+        </constructor-arg>
+
+    </bean>
+
+</beans>
