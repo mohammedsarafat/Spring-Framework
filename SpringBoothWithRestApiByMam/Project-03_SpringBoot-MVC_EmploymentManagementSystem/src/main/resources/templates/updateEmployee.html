@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Update Employee</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb);
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
+    overflow:hidden;
+}
+
+/* Animated Gradient */
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating Background */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    animation:float 8s ease-in-out infinite;
+}
+
+body::before{
+    top:-80px;
+    left:-80px;
+}
+
+body::after{
+    bottom:-80px;
+    right:-80px;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(30px);
+    }
+}
+
+/* Glass Card */
+
+.container{
+    width:450px;
+    padding:35px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    font-size:30px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.3);
+}
+
+label{
+    display:block;
+    color:white;
+    font-weight:bold;
+    margin:12px 0 6px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.9);
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus{
+    transform:scale(1.03);
+    box-shadow:0 0 10px rgba(255,255,255,.8);
+}
+
+/* Update Button */
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:#ff9800;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#e68900;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+/* Bottom Links */
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.links a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#fff176;
+    transform:scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>✏️ Update Employee</h2>
+
+    <form th:action="@{/employee/update/{id}(id=${employee.id})}"
+          th:object="${employee}"
+          method="post">
+
+        <input type="hidden" th:field="*{id}">
+
+        <label>Employee Name</label>
+        <input type="text"
+               th:field="*{name}"
+               placeholder="Enter Employee Name"
+               required>
+
+        <label>Department</label>
+        <input type="text"
+               th:field="*{dept}"
+               placeholder="Enter Department"
+               required>
+
+        <label>Email</label>
+        <input type="email"
+               th:field="*{email}"
+               placeholder="Enter Email"
+               required>
+
+        <label>Mobile Number</label>
+        <input type="number"
+               th:field="*{mob}"
+               placeholder="Enter Mobile Number"
+               required>
+
+        <button type="submit">
+            🔄 Update Employee
+        </button>
+
+    </form>
+
+    <div class="links">
+        <a th:href="@{/employee/all}">📋 Employee List</a>
+        <a th:href="@{/}">🏠 Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>
