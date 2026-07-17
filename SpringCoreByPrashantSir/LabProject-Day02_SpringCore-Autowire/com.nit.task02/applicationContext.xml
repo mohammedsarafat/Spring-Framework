@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="deliveryPartner"
+          class="com.nit.task02.DeliveryPartner">
+
+        <property name="partnerId" value="DP101"/>
+        <property name="partnerName" value="Arjun"/>
+        <property name="vehicleType" value="Bike"/>
+
+    </bean>
+
+    <bean id="order" class="com.nit.task02.Order" autowire="byName">
+
+        <property name="orderId" value="501"/>
+        <property name="customerName" value="Pawan"/>
+        <property name="foodItem" value="Paneer Biryani"/>
+
+    </bean>
+</beans>
