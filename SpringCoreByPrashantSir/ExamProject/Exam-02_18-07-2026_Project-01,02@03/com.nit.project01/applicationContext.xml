@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="engine" class="com.nit.project01.Engine">
+
+        <property name="engineId" value="101"/>
+        <property name="engineType" value="Petrol"/>
+        <property name="horsepower" value="150"/>
+        <property name="fuelType" value="Petrol"/>
+        <property name="engineCapacity" value="2.0"/>
+        <property name="manufacturer" value="Honda"/>
+
+    </bean>
+
+    <bean id="car"  class="com.nit.project01.Car"  autowire="byType">
+
+        <property name="carId" value="1001"/>
+        <property name="carName" value="Honda City"/>
+        <property name="model" value="ZX"/>
+        <property name="color" value="White"/>
+        <property name="price" value="1500000"/>
+
+    </bean>
+
+</beans>
