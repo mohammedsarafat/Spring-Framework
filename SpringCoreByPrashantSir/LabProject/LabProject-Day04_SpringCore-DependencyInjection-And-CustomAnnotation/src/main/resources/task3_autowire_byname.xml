@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="department" class="com.nit.model.Department">
+        <property name="departmentId" value="103" />
+        <property name="departmentName" value="Finance" />
+        <property name="departmentLocation" value="Chicago" />
+    </bean>
+
+    <bean id="employee" class="com.nit.model.Employee" autowire="byName">
+        <property name="employeeId" value="1003" />
+        <property name="employeeName" value="Alice Johnson" />
+        <property name="employeeSalary" value="80000.0" />
+    </bean>
+
+</beans>
