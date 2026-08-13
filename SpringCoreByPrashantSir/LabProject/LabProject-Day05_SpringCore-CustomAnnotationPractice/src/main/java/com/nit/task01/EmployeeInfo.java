@@ -1,4 +1,4 @@
-package com.nit;
+package com.nit.task01;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

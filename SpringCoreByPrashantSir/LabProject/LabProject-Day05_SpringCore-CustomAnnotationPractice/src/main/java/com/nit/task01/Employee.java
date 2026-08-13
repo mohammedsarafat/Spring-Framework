@@ -1,4 +1,4 @@
-package com.nit;
+package com.nit.task01;
 
 @EmployeeInfo(
         id = 101,
