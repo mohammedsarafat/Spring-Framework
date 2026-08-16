@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Department Bean -->
+    <bean id="department" class="com.nit.task04.Department">
+
+        <property name="deptName" value="IT"/>
+        <property name="location" value="Hyderabad"/>
+
+    </bean>
+
+
+    <!-- Employee Bean -->
+    <bean id="employee"
+          class="com.nit.task04.Employee"
+          autowire="byType">
+
+        <!-- Primitive values -->
+        <property name="id" value="101"/>
+        <property name="name" value="Sahid"/>
+        <property name="salary" value="50000"/>
+
+    </bean>
+
+</beans>
