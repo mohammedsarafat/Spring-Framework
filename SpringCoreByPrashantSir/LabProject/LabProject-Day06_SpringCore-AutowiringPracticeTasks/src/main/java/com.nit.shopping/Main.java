@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("com/nit/shopping/applicationContext.xml");
+                new ClassPathXmlApplicationContext("applicationContext-shopping.xml");
 
         ShoppingCart cart =
                 context.getBean(ShoppingCart.class);
